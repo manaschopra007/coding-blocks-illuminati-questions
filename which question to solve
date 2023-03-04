@@ -1,0 +1,49 @@
+/*Three close friends, Petya, Vasya, and Tonya, have formed a team to participate in programming contests.
+The contest organizers offer several problems for the participants to solve.
+Prior to the contest, the friends agreed that they would only implement a problem's solution if at least two of them are confident in solving it. 
+ If not, they would not attempt to solve the problem.
+ For each of the n problems offered in the contest, the friends have information about which of them are confident in solving it.
+ We need to help the friends determine how many problems they will solve based on this information.
+ sample input 
+ 10
+1 0 1
+1 0 0
+1 0 0
+1 0 1
+0 0 0
+1 0 1
+1 1 0
+0 1 1
+0 1 0
+0 1 1
+sample output - 6
+There is only 6 questions on which atleast 2 of the three contestants agree. They are question no 1,4,6,7,8,10*/
+
+// code
+#include <iostream>
+using namespace std;
+
+int main(){
+
+    int n;
+    cin>>n;
+    int a[n][3];
+
+    for(int i=0;i<n;i++){
+    for(int j=0;j<3;j++){
+            cin>>a[i][j];
+        }
+    }
+    int answer =0;
+    for(int i=0;i<n;i++){
+        int count = 0;
+        for(int j=0;j<3;j++){
+            if (a[i][j]==1){count++;
+            if (count==2){answer++;}
+            }
+                
+        }
+    }
+    cout<<answer;
+    return 0;
+}
