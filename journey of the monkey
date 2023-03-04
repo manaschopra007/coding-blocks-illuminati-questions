@@ -1,0 +1,22 @@
+/*A monkey decided to visit his friend. 
+It turned out that the monkey’s house is located at point 0 and his friend's house is located at point x(x > 0) of the coordinate line. 
+In one step the monkey can move 1, 2, 3, 4 or 5 positions forward. 
+Determine, what is the minimum number of steps he need to make in order to get to his friend's house.*/
+
+//Sample Input - 9 and sample output - 2. monkey moves 5 steps first and the 4 steps
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int x;
+    cin>>x;
+    int s = x/5;
+    int m = x%5;
+    int answer;
+    if(m==0){answer = s;}
+    else{answer = s+1;}
+
+    cout<<answer;
+    return 0;
+}
