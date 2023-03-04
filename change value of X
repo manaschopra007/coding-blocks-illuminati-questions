@@ -1,0 +1,51 @@
+/*Bitland's classic programming language is called Bit++. This language has a unique and complex structure.
+ It contains only one variable, which is called "x", and two operations: "++" and "--". 
+ The operation "++" increases the value of "x" by 1, and the operation "--" decreases the value of "x" by 1. 
+ A statement in Bit++ consists of only one operation and the variable "x", written without spaces.
+ Executing a statement means performing the operation it contains.
+  A program in Bit++ is a sequence of statements that need to be executed one after the other.
+The execution of a program means executing all the statements it contains, starting from an initial value of "x" equal to 0. 
+Your task is to execute the program and find the final value of "x" when the program has finished executing.
+sample input - 
+7
+X--
+++X
+X++
+++X
+--X
+--X
+X--
+sample output = -1*/
+
+
+
+
+
+
+
+
+
+
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    int n;
+    cin>>n;
+    int answer =0;
+   
+   
+    for(int i=0;i<n;i++){
+    for(int i=0;i<n;i++){
+        string st;
+        cin>>st;
+        if(st[0]=='+' || st[2]=='+'){answer++;}
+        else if (st[0]=='-' || st[2]=='-'){answer--;}
+       
+        
+    }      
+    cout<<answer;
+    return 0;
+
+}
