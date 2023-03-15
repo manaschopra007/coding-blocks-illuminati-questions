@@ -1,0 +1,21 @@
+//Take N as input, Calculate it's reverse also Print the reverse.
+
+//sample input - 123456789
+//sample output - 987654321
+
+
+
+
+#include<iostream>
+using namespace std;
+int main() {
+int n;
+	cin>>n;
+	int out =0;
+  while (n>0){
+	 out = out*10 + n%10;
+		n = n/10;
+    }
+	cout<<out;
+	return 0;
+}
